@@ -16,19 +16,19 @@ function JobListing(props) {
 
 				<ul className="info">
 					<li>{currentJob.postedAt}</li>
+					<li>-</li>
 					<li>{currentJob.contract}</li>
+					<li>-</li>
 					<li>{currentJob.location}</li>
 				</ul>
 			</div>
 
 			{/* TODO: Move to own component */}
-			<div className="tags">
-				<ul>
-					<li>tag</li>
-					<li>tag</li>
-					<li>tag</li>
-				</ul>
-			</div>
+			<ul className="tags">
+				<li>tag</li>
+				<li>tag</li>
+				<li>tag</li>
+			</ul>
 		</div>
 	)
 }

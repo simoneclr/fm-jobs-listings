@@ -22,7 +22,79 @@
 body {
 	font-family: "Spartan", sans-serif;
 	font-size: 15px;
+	background-color: var(--bg-light-grayish-cyan);
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
+}
+
+/* JobListing COMPONENT */
+.job-listing {
+	background-color: white;
+	width: 70%;
+	padding: 2rem;
+	margin: 2rem auto;
+	border-radius: .5rem;
+	box-shadow: 0 1rem 3rem -2rem var(--desaturated-dark-cyan);
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 2rem;
+}
+
+.logo	{
+	line-height: 0;
+}
+
+.details {
+	/* Occupy all available space and push tags to the right of parent flex */
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.company-name {
+	color: var(--desaturated-dark-cyan);
+	font-weight: var(--weight-heavy);
+	margin: 0;
+}
+
+.position {
+	color: var(--very-dark-grayish-cyan);
+	font-size: 1.2em;
+}
+
+.info {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.info > li {
+	display: inline-block;
+	color: var(--dark-grayish-cyan);
+}
+
+.info > li + li {
+	margin-left: .6rem;
+}
+
+.tags {
+	list-style: none;
+	padding: 0;
+}
+
+.tags > li {
+	display: inline-block;
+	font-weight: var(--weight-heavy);
+	color: var(--desaturated-dark-cyan);
+	padding: .5rem;
+	background-color: var(--bg-light-grayish-cyan);
+}
+
+.tags > li + li {
+	margin-left: 1rem;
 }
