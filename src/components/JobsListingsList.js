@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import JobListing from "./JobListing";
+
 import getData from "../services/getData";
 
 // Component that displays the list of available jobs
@@ -14,7 +16,7 @@ function JobListingsList() {
 		})
 	}, [])
 	
-	return jobs.map(j => <p key={j.id}>{j.position}</p>)
+	return jobs.map(j => <JobListing key={j.id} job={j}/>)
 }
 
 export default JobListingsList
