@@ -1,7 +1,9 @@
 import React from "react"
 
+import JobListings from "./components/JobListings"
+
 function App() {
-	return <h1>Front End Mentor Jobs Listings</h1>
+	return <JobListings/>
 }
 
 export default App
