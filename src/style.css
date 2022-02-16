@@ -38,9 +38,10 @@ body {
 	box-shadow: 0 1rem 3rem -2rem var(--desaturated-dark-cyan);
 
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	column-gap: 2rem;
+	gap: 1rem 2rem;
 }
 
 .logo	{
@@ -82,19 +83,23 @@ body {
 	margin-left: .6rem;
 }
 
+/* JobTags COMPONENT */
 .tags {
 	list-style: none;
 	padding: 0;
+	margin: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
 }
 
 .tags > li {
-	display: inline-block;
+	display: block;
 	font-weight: var(--weight-heavy);
 	color: var(--desaturated-dark-cyan);
 	padding: .5rem;
 	background-color: var(--bg-light-grayish-cyan);
-}
-
-.tags > li + li {
-	margin-left: 1rem;
 }
