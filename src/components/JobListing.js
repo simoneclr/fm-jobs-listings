@@ -2,6 +2,7 @@ import React from "react";
 
 import JobTags from "./JobTags";
 
+// Component that display each job listing
 function JobListing(props) {
 	let currentJob = props.job
 
