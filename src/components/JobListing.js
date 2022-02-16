@@ -1,5 +1,7 @@
 import React from "react";
 
+import JobTags from "./JobTags";
+
 function JobListing(props) {
 	let currentJob = props.job
 
@@ -23,12 +25,7 @@ function JobListing(props) {
 				</ul>
 			</div>
 
-			{/* TODO: Move to own component */}
-			<ul className="tags">
-				<li>tag</li>
-				<li>tag</li>
-				<li>tag</li>
-			</ul>
+			<JobTags tags={[currentJob.role, currentJob.level, ...currentJob.languages, ...currentJob.tools]}/>
 		</div>
 	)
 }
