@@ -37,11 +37,63 @@ body {
 	border-radius: .5rem;
 	box-shadow: 0 1rem 3rem -2rem var(--desaturated-dark-cyan);
 
+	border-left: .5rem solid white;
+	border-right: .5rem solid white;
+
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem 2rem;
+}
+
+/* Color the left border on featured job listings */
+.featured {
+	border-left: .5rem solid var(--desaturated-dark-cyan);
+}
+
+/* Job listing header */
+.job-header {
+	color: white;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.company-name {
+	color: var(--desaturated-dark-cyan);
+	font-weight: var(--weight-heavy);
+	margin: 0;
+}
+
+.featured-tag, .new-tag {
+	/* Do not display the NEW! and FEATURED tags unsless necessary */
+	display: none;
+	font-size: .8em;
+	padding: .5rem;
+	/* For some reason the text has some whitespace only at the bottom, compensate with smaller padding */
+	padding-bottom: .25rem;
+	/* Negative margin compensates padding added to avoid compromising layout alignment */
+	margin: -0.5rem 0 -0.25rem 0;
+	border-radius: 1rem;
+}
+
+.new-tag {
+	background-color: var(--desaturated-dark-cyan);
+}
+
+.featured-tag {
+	background-color: var(--very-dark-grayish-cyan);
+}
+
+/* Display them when the corresponding class is present on the job listing container */
+.featured .featured-tag, .new .new-tag {
+	display: block;
 }
 
 .logo	{
@@ -55,12 +107,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.company-name {
-	color: var(--desaturated-dark-cyan);
-	font-weight: var(--weight-heavy);
-	margin: 0;
 }
 
 .position {

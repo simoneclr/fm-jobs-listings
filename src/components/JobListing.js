@@ -6,13 +6,18 @@ function JobListing(props) {
 	let currentJob = props.job
 
 	return (
-		<div className="job-listing">
+		<div className={"job-listing" + (currentJob.new ? " new" : "") + 
+		(currentJob.featured ? " featured" : "")}>
 			<div className="logo">
 				<img src={currentJob.logo} alt={currentJob.company + "'s logo"} />
 			</div>
 
 			<div className="details">
-				<p className="company-name">{currentJob.company}</p>
+				<ul className="job-header">
+					<li className="company-name">{currentJob.company}</li>
+					<li className="new-tag">NEW!</li>
+					<li className="featured-tag">FEATURED</li>
+				</ul>
 
 				<h2 className="position">{currentJob.position}</h2>
 
