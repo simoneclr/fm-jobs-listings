@@ -31,7 +31,7 @@ function JobListing(props) {
 				</ul>
 			</div>
 
-			<JobTags handleAddFilter={props.handleAddFilter}
+			<JobTags addFilter={props.addFilter}
 				tags={[currentJob.role, currentJob.level, ...currentJob.languages, ...currentJob.tools]}/>
 		</div>
 	)

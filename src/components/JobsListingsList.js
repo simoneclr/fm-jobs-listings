@@ -20,11 +20,7 @@ function JobListingsList() {
 	}, [])
 	
 	// Function that allows to add a new filter
-	const handleAddFilter = (e) => {
-		e.preventDefault();
-
-		let newFilter = e.target.innerHTML
-
+	const handleAddFilter = (newFilter) => {
 		if (filters.indexOf(newFilter) < 0) {
 			setFilters(prevFilters => [...prevFilters, newFilter])
 		}
@@ -42,7 +38,7 @@ function JobListingsList() {
 		})
 
 		return pass
-	}).map(j => <JobListing key={j.id} job={j} handleAddFilter={handleAddFilter}/>)
+	}).map(j => <JobListing key={j.id} job={j} addFilter={handleAddFilter}/>)
 }
 
 export default JobListingsList
