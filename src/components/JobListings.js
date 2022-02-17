@@ -27,6 +27,28 @@ function JobListings() {
 		}
 	}
 
+	// Function that allows to remove a filter
+	const handleRemoveFilter = (removedFilter) => {
+		if (filters.indexOf(removedFilter) >= 0) {
+			setFilters(prevFilters => {
+				let updaedFilters = []
+
+				prevFilters.forEach(f => {
+					if (f !== removedFilter) {
+						updaedFilters.push(f)
+					}
+				})
+
+				return updaedFilters
+			})
+		}
+	}
+
+	// Functions that allows to clear all filters
+	const handleClearFilters = () => {
+		setFilters([])
+	}
+
 	let filteredJobs = jobs.filter(j => {
 		let pass = true
 		
@@ -43,7 +65,7 @@ function JobListings() {
 
 	return (
 		<React.Fragment>
-			<JobsFilters filters={filters}/>
+			<JobsFilters filters={filters} removeFilter={handleRemoveFilter} clearFilters={handleClearFilters}/>
 			
 			<JobListingsList jobs={filteredJobs} addFilter={handleAddFilter}/>
 		</React.Fragment>
