@@ -7,7 +7,7 @@ function JobListing(props) {
 	let currentJob = props.job
 
 	return (
-		<div className={"job-listing" + (currentJob.new ? " new" : "") + 
+		<div className={"card job-listing" + (currentJob.new ? " new" : "") + 
 		(currentJob.featured ? " featured" : "")}>
 			<div className="logo">
 				<img src={currentJob.logo} alt={currentJob.company + "'s logo"} />

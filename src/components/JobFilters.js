@@ -8,27 +8,28 @@ function JobsFilters(props) {
 		if (e.target.id === "clear-filters") {
 			props.clearFilters()
 		} else {
-			props.removeFilter(e.target.innerHTML)
+			props.removeFilter(e.target.value)
 		}
 	} 
 
-	return (
-		<div className="filters-menu">
-			<ul className="active-filters">
+	return props.filters.length > 0 && (
+		/*
+			If there's at least one active filter, display clear button
+			JS evaluates the first expression, if it's true, it evaluates the second 
+			(which displays the button), otherwise the second is ignored (i.e. the button is not displayed)
+		*/
+
+		<div className="card filters-menu">
+			<ul className="tag-list active-filters">
 				{props.filters.map((f, i) => 
 					<li key={i}>
-						<button onClick={handleClick}>{f}</button>
+						<div className="tag filter-tag">
+							{f}<button onClick={handleClick} value={f} className="filter-button-remove">X</button>
+						</div>
 					</li>)}
 			</ul>
 
-			{/*
-				If there's at least one active filter, display clear button
-				JS evaluates the first expression, if it's true, it evaluates the second 
-				(which displays the button), otherwise the second is ignored (i.e. the button is not displayed)
-			*/}
-			{props.filters.length > 0 && (
-				<button onClick={handleClick} id="clear-filters">Clear</button>
-			)}
+			<button onClick={handleClick} id="clear-filters">Clear</button>
 		</div>
 	)
 }

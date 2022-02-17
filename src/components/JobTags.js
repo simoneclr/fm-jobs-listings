@@ -9,10 +9,10 @@ function JobTags(props) {
 	}
 
 	return (
-		<ul className="tags">
+		<ul className="tag-list job-tags">
 			{props.tags.map((t, i) => 
 				<li key={i}>
-					<button className="tag-button" onClick={handleTagClick}>{t}</button>
+					<button className="tag job-tag-button" onClick={handleTagClick}>{t}</button>
 				</li>
 			)}
 		</ul>

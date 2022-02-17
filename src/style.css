@@ -28,15 +28,100 @@ body {
 	margin: 0;
 }
 
-/* JobListing COMPONENT */
-.job-listing {
+.card {
 	background-color: white;
 	width: 70%;
 	padding: 2rem;
 	margin: 2rem auto;
 	border-radius: .5rem;
 	box-shadow: 0 1rem 3rem -2rem var(--desaturated-dark-cyan);
+}
 
+.tag-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.tag {
+	font-weight: var(--weight-heavy);
+	color: var(--desaturated-dark-cyan);
+	padding: .5rem;
+	padding-bottom: .3rem;
+	background-color: var(--bg-light-grayish-cyan);
+	border-radius: .2rem;
+}
+
+/* JobFilters COMPONENT */
+.filters-menu {
+	/* Makes up for the border present left and right on JobListing components for better alignment*/
+	padding: 2rem 2.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 2rem;
+}
+
+.filter-tag {
+	overflow: hidden;
+	padding: 0;
+	padding-left: .5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	column-gap: .5rem;
+}
+
+.filter-button-remove {
+	font-family: "Spartan", sans-serif;
+	font-weight: var(--weight-heavy);
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: white;
+	background-color: var(--desaturated-dark-cyan);
+	padding: .5rem;
+	padding-bottom: .3rem;
+}
+
+.filter-button-remove:hover {
+	background-color: var(--very-dark-grayish-cyan);
+}
+
+.filter-buton-remove:active {
+	opacity: .8;
+}
+
+#clear-filters {
+	font-family: "Spartan", sans-serif;
+	font-weight: var(--weight-heavy);
+	color: var(--desaturated-dark-cyan);
+	padding: .5rem;
+	padding-bottom: .3rem;
+	cursor: pointer;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+#clear-filters:hover {
+	text-decoration: underline;
+}
+
+#clear-filters:active{
+	color: var(--very-dark-grayish-cyan);
+}
+
+/* JobListing COMPONENT */
+.job-listing {
 	border-left: .5rem solid white;
 	border-right: .5rem solid white;
 
@@ -130,40 +215,22 @@ body {
 }
 
 /* JobTags COMPONENT */
-.tags {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 1rem;
-}
-
-.tags > li {
+.job-tags > li {
 	display: block;
 }
 
-.tag-button {
-	cursor: pointer;
+.job-tag-button {
 	font-family: "Spartan", sans-serif;
-	font-weight: var(--weight-heavy);
-	color: var(--desaturated-dark-cyan);
-	padding: .5rem;
-	padding-bottom: .3rem;
-	background-color: var(--bg-light-grayish-cyan);
+	cursor: pointer;
 	outline: none;
 	border: none;
-	border-radius: .2rem;
 }
 
-.tag-button:hover {
+.job-tag-button:hover {
 	color: white;
 	background-color: var(--desaturated-dark-cyan);
 }
 
-.tag-button:active {
+.job-tag-button:active {
 	opacity: .8;
 }
