@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import JobsFilters from "./JobFilters";
 import JobListingsList from "./JobsListingsList";
 
 import getData from "../services/getData";
@@ -26,7 +27,27 @@ function JobListings() {
 		}
 	}
 
-	return <JobListingsList jobs={jobs} filters={filters} addFilter={handleAddFilter}/>
+	let filteredJobs = jobs.filter(j => {
+		let pass = true
+		
+		// Join all filterable tags in a single array for convenience 
+		let tags = [j.role, j.level, ...j.languages, ...j.tools]
+
+		// Iterate on all filters, and check if they are all present in the current job's tags
+		filters.forEach(f => {
+			pass = pass && tags.indexOf(f) >= 0
+		})
+
+		return pass
+	})
+
+	return (
+		<React.Fragment>
+			<JobsFilters filters={filters}/>
+			
+			<JobListingsList jobs={filteredJobs} addFilter={handleAddFilter}/>
+		</React.Fragment>
+	)
 }
 
 export default JobListings
