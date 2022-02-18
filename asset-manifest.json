@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fm-jobs-listings/static/css/main.bfaf992c.css",
+    "main.js": "/fm-jobs-listings/static/js/main.92046f7a.js",
+    "index.html": "/fm-jobs-listings/index.html",
+    "main.bfaf992c.css.map": "/fm-jobs-listings/static/css/main.bfaf992c.css.map",
+    "main.92046f7a.js.map": "/fm-jobs-listings/static/js/main.92046f7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfaf992c.css",
+    "static/js/main.92046f7a.js"
+  ]
+}
