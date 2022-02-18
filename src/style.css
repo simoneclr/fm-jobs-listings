@@ -266,3 +266,26 @@ body {
 .job-tag-button:active {
 	opacity: .8;
 }
+
+/* FOOTER */
+footer {
+	width: 100%;
+	background-color: var(--desaturated-dark-cyan);
+}
+
+.attribution {
+	color: var(--very-dark-grayish-cyan);
+	width: 80%;
+	padding: 2rem 2.5rem 1.5rem 2.5rem;
+	margin: 0 auto;
+}
+
+.attribution a {
+	text-decoration: none;
+	font-weight: var(--weight-heavy);
+	color: inherit;
+}
+
+.attribution a:hover {
+	color: var(--bg-light-grayish-cyan);
+}

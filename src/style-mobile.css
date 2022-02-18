@@ -43,4 +43,10 @@
 	.job-tags {
 		margin-top: 1rem;
 	}
+
+	.attribution {
+		width: 90%;
+		line-height: 1.5em;
+		padding: 1rem 1.5rem .5rem 1.5rem;
+	}
 }
