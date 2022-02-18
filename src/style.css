@@ -80,16 +80,19 @@ body {
 	column-gap: .5rem;
 }
 
+.filter-tag > span {
+	display: block;
+	padding: .5rem 0 .3rem 0;
+}
+
 .filter-button-remove {
-	font-family: "Spartan", sans-serif;
-	font-weight: var(--weight-heavy);
+	line-height: 0;
 	cursor: pointer;
 	outline: none;
 	border: none;
-	color: white;
+	padding: 0 .5rem;
 	background-color: var(--desaturated-dark-cyan);
-	padding: .5rem;
-	padding-bottom: .3rem;
+	align-self: stretch;
 }
 
 .filter-button-remove:hover {
@@ -98,6 +101,10 @@ body {
 
 .filter-buton-remove:active {
 	opacity: .8;
+}
+
+.filter-button-remove > img {
+	height: 1em;
 }
 
 #clear-filters {

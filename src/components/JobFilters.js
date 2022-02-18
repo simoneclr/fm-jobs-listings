@@ -24,7 +24,10 @@ function JobsFilters(props) {
 				{props.filters.map((f, i) => 
 					<li key={i}>
 						<div className="tag filter-tag">
-							{f}<button onClick={handleClick} value={f} className="filter-button-remove">X</button>
+							<span>{f}</span>
+							<button onClick={handleClick} value={f} className="filter-button-remove">
+								<img src="./images/icon-remove.svg" alt="" />
+							</button>
 						</div>
 					</li>)}
 			</ul>
