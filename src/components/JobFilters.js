@@ -8,7 +8,7 @@ function JobsFilters(props) {
 		if (e.target.id === "clear-filters") {
 			props.clearFilters()
 		} else {
-			props.removeFilter(e.target.value)
+			props.removeFilter(e.currentTarget.value)
 		}
 	} 
 
