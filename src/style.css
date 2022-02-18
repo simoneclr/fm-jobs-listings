@@ -30,7 +30,7 @@ body {
 
 .card {
 	background-color: white;
-	width: 70%;
+	width: 100%;
 	padding: 2rem;
 	margin: 2rem auto;
 	border-radius: .5rem;
@@ -58,15 +58,36 @@ body {
 	border-radius: .2rem;
 }
 
+/* App COMPONENT */
+.bg-header {
+	width: 100%;
+	line-height: 0;
+	background-color: var(--desaturated-dark-cyan);
+}
+
+.bg-header > img {
+	width: 100%;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
 /* JobFilters COMPONENT */
 .filters-menu {
 	/* Makes up for the border present left and right on JobListing components for better alignment*/
 	padding: 2rem 2.5rem;
+	margin: 0 auto;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	column-gap: 2rem;
+
+	transform: translateY(-3rem);
+	/* Negative margin makes up for translation */
+	margin-bottom: -3rem; 
 }
 
 .filter-tag {
@@ -136,7 +157,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 1rem 2rem;
+	gap: 2rem;
 }
 
 /* Color the left border on featured job listings */
