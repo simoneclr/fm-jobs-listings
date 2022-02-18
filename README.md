@@ -2,6 +2,8 @@
 
 ![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)
 
+[Live Demo](https://simoneclr.github.io/fm-jobs-listings/)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
